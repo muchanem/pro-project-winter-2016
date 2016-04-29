@@ -497,6 +497,7 @@
 				7E3824C21CC2BBA9009C728F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E3824C31CC2BBA9009C728F /* Build configuration list for PBXNativeTarget "DogeDodgeTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +506,7 @@
 				7E3824C51CC2BBA9009C728F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E3824C61CC2BBA9009C728F /* Build configuration list for PBXNativeTarget "DogeDodgeUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +515,7 @@
 				7E3824C81CC2BBA9009C728F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
