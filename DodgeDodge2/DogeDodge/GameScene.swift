@@ -9,7 +9,7 @@
 import SpriteKit
 import CoreMotion
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate  {
     var dog = SKSpriteNode()
     var object = SKSpriteNode()
     var motionManager = CMMotionManager()
@@ -19,7 +19,10 @@ class GameScene: SKScene {
  
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
- 
+            self.physicsWorld.contactDelegate = self
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(GameScene.spawnEnemy), userInfo: nil, repeats: true)
+
         // 1
         dog = SKSpriteNode(imageNamed: "doge")
         dog.position = CGPointMake(frame.size.width/2, frame.size.height/2)
@@ -49,10 +52,27 @@ class GameScene: SKScene {
         }
     }
     
+    
+    func randomBetweenNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat{
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+    }
+    
+    func spawnEnemy(){
+        //supposed to pick random point within the screen width
+        let xPos = randomBetweenNumbers(0, secondNum: frame.width )
+        
+        let enemy = SKSpriteNode(imageNamed: "doge") //create a new enemy each time
+        enemy.position = CGPointMake(CGFloat(xPos), 720)
+        enemy.physicsBody = SKPhysicsBody(circleOfRadius: 7)
+        enemy.physicsBody?.affectedByGravity = true
+        enemy.physicsBody?.categoryBitMask = 0
+        enemy.physicsBody?.contactTestBitMask = 1
+        addChild(enemy)
+    }
     // 4
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        let action = SKAction.moveToX(destX, duration: 1)
+        let action = SKAction.moveToX(destX, duration: 0.2)
         self.dog.runAction(action)
     }
 }
