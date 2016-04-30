@@ -2,18 +2,12 @@
 
 *Replace this sample with your own report*
 
-*Write an overall summary of the project in a few sentances here, your
-impressions, your accomplishments. Keep in mind this is public and
-will be read by your peers, parents, and others.*
+*My project to was to create a game called doge dodge in Swift were you had to aviod falling doges. DogeDodge was orginally created at skilstak in the game class and I decided to make a version in Swift (a programming language for ios apps) using SpriteKit (a frame work for creating ios games).*
 
 ## Lessons Learned
 
-*Replace this with a description of what you would do differently,
-things you may have failed at, but learned from. The best entrepreneurs
-and innovators fail more than others because they try more things.
-What did you learn from your successes and failures.*
+*If i had to do anything differrent next  time I would spend more time researching SpriteKit. The main lesson that I learned is that swift code for different frameworks can be hugley different.*
 
 ## Next Steps
 
-*Create a summary of what you would like to do next, if anything, with
-this project. Often a Pro project can be ongoing between semesters.*
+*I would like to probally create a better way to move the dodger with the accelorometer with this project.*
